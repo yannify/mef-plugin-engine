@@ -1,0 +1,5 @@
+C:\MyRepos\mef-plugin-engine\MefPluginEngine\Mef.App.Engine\bin\Debug\Mef.App.Engine.dll
+C:\MyRepos\mef-plugin-engine\MefPluginEngine\Mef.App.Engine\bin\Debug\Mef.App.Engine.pdb
+C:\MyRepos\mef-plugin-engine\MefPluginEngine\Mef.App.Engine\obj\Debug\Mef.App.Engine.csprojResolveAssemblyReference.cache
+C:\MyRepos\mef-plugin-engine\MefPluginEngine\Mef.App.Engine\obj\Debug\Mef.App.Engine.dll
+C:\MyRepos\mef-plugin-engine\MefPluginEngine\Mef.App.Engine\obj\Debug\Mef.App.Engine.pdb
