@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Mef.App.Plugins.Interfaces
 {
-    public class ExecutionResult
+    public interface IExecutionResult
     {
+        bool IsSuccess { get; }
+        IDictionary<string, object> Output { get; }
     }
 }

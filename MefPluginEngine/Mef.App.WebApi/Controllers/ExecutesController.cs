@@ -12,24 +12,28 @@ namespace Mef.App.WebApi.Controllers
     public class ExecutesController : ApiController
     {
         // GET: api/Executes
-        public IEnumerable<string> Get( string descriptor)
+        public IExecutionResult Get(string pluginDescriptor, string command)
         {
             // TODO:  This all belongs in a post that takes in a message
             // only here for ease of testing as we build out the layers
 
-            List<string> output = new List<string>();
-            var p = new PluginManager();
+            IExecutionResult result;
+            var manager = new PluginManager();
 
-            foreach (Lazy<IAppPlugin, IAppPluginMetadata> i in p.Plugins)
+            foreach (Lazy<IAppPlugin, IAppPluginMetadata> plugin in manager.Plugins)
             {
-                if (i.Metadata.PluginDescriptor.Equals(descriptor))
+                if (plugin.Metadata.PluginDescriptor.Equals(pluginDescriptor))
                 {
                     // do stuff here!!!
-                   
+                    plugin.Value.PreExecute(new Dictionary<string, object>());
+                    result = plugin.Value.ExecuteCommand(command, new Dictionary<string, object>());
+                    plugin.Value.PostExecute(new Dictionary<string, object>());
+
+                    return result;
                 }
             }
 
-            return output;
+            return null;
         }
 
 

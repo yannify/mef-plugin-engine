@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExecutionResult.cs" />
+    <Compile Include="IExecutionResult.cs" />
     <Compile Include="IAppPlugin.cs" />
     <Compile Include="IAppPluginMetadata.cs" />
     <Compile Include="ICommand.cs" />

@@ -21,8 +21,7 @@ namespace Mef.App.Engine
             var catalog = new AggregateCatalog();
             //Adds all the parts found in the same assembly as the Program class
             catalog.Catalogs.Add(new AssemblyCatalog(typeof(PluginManager).Assembly));
-            catalog.Catalogs.Add(new DirectoryCatalog("C:\\MyData\\MefPrototypePlugins"));
-
+            catalog.Catalogs.Add(new DirectoryCatalog("C:\\MyData\\MEF_Plugins"));
 
             //Create the CompositionContainer with the parts in the catalog
             _container = new CompositionContainer(catalog);

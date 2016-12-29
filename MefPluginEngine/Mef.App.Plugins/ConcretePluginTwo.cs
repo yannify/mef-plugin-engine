@@ -1,4 +1,5 @@
-﻿using Mef.App.Plugins.Interfaces;
+﻿using Mef.App.Plugins;
+using Mef.App.Plugins.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
@@ -10,9 +11,9 @@ namespace Mef.App.Plugins
 {
 
     [Export(typeof(IAppPlugin))]
-    [ExportMetadata("PluginDescriptor", "mef.app.plugins.concrete_plugin_one")]
-    [ExportMetadata("SomeOtherData", "foo")]
-    public class ConcretePluginOne : IAppPlugin
+    [ExportMetadata("PluginDescriptor", "mef.app.plugins.concrete_plugin_two")]
+    [ExportMetadata("SomeOtherData", "bar")]
+    public class ConcretePluginTwo: IAppPlugin
     {
         public IExecutionResult ExecuteCommand(string commandKey, Dictionary<string, object> input)
         {
@@ -32,27 +33,27 @@ namespace Mef.App.Plugins
 
         private Dictionary<string, ICommand> _commands = new Dictionary<string, ICommand>
         {
-            {"Command_One", new CommandOne() },
-            {"Command_Two", new CommandTwo() }
+            {"Command_Three", new CommandThree() },
+            {"Command_Four", new CommandFour() }
         };
     }
 
-    public class CommandOne : ICommand
+    public class CommandThree : ICommand
     {
         public IExecutionResult Execute(IDictionary<string, object> input)
         {
             return new ExecutionResult(true, new Dictionary<string, object> {
-                { "ResultOne", "Greetings from CommandOne in ConcretePluginOne!" }
+                { "ResultOne", "Greetings from CommandThree in ConcretePluginTwo!" }
             });
         }
     }
 
-    public class CommandTwo : ICommand
+    public class CommandFour : ICommand
     {
         public IExecutionResult Execute(IDictionary<string, object> input)
         {
             return new ExecutionResult(true, new Dictionary<string, object> {
-                { "ResultOne", "Greetings from CommandTwo in ConcretePluginOne!" },
+                { "ResultOne", "Greetings from CommandFour in ConcretePluginTwo!" },
                 { "ResultTwo", false }
             });
         }

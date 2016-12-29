@@ -8,6 +8,6 @@ namespace Mef.App.Plugins.Interfaces
 {
     public interface ICommand
     {
-        ExecutionResult Execute(IDictionary<string, object> input);
+        IExecutionResult Execute(IDictionary<string, object> input);
     }
 }

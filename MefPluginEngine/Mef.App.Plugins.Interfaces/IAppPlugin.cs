@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mef.App.Plugins.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,8 @@ namespace Mef.App.Plugins.Interfaces
 {
     public interface IAppPlugin
     {
-        //string PreExecute();
-        //string PostExecute();
-
-
+        IExecutionResult PreExecute(IDictionary<string, object> input);
+        IExecutionResult PostExecute(IDictionary<string, object> input);
+        IExecutionResult ExecuteCommand(string commandKey, Dictionary<string, object> input);
     }
 }
