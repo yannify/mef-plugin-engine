@@ -48,6 +48,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -104,6 +105,16 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mef.App.Engine\Mef.App.Engine.csproj">
+      <Project>{cfdf1983-dc79-44c4-8274-4b2bd5fcab33}</Project>
+      <Name>Mef.App.Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mef.App.Plugins.Interfaces\Mef.App.Plugins.Interfaces.csproj">
+      <Project>{873374e0-f0e5-479c-b8e0-8a4a9e32cc41}</Project>
+      <Name>Mef.App.Plugins.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

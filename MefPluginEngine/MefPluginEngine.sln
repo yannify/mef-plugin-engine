@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mef.App.Plugins", "Mef.App.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mef.App.WebApi", "Mef.App.WebApi\Mef.App.WebApi.csproj", "{C19FA560-98B2-4DA7-9E60-676022A2BEC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mef.App.Plugins.Interfaces", "Mef.App.Plugins.Interfaces\Mef.App.Plugins.Interfaces.csproj", "{873374E0-F0E5-479C-B8E0-8A4A9E32CC41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C19FA560-98B2-4DA7-9E60-676022A2BEC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C19FA560-98B2-4DA7-9E60-676022A2BEC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C19FA560-98B2-4DA7-9E60-676022A2BEC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{873374E0-F0E5-479C-B8E0-8A4A9E32CC41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{873374E0-F0E5-479C-B8E0-8A4A9E32CC41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{873374E0-F0E5-479C-B8E0-8A4A9E32CC41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{873374E0-F0E5-479C-B8E0-8A4A9E32CC41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

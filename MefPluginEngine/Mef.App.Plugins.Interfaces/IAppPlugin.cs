@@ -8,5 +8,9 @@ namespace Mef.App.Plugins.Interfaces
 {
     public interface IAppPlugin
     {
+        //string PreExecute();
+        //string PostExecute();
+
+
     }
 }
